@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "San Francisco";
+    src: url("sfpro.otf");
+}
+@font-face {
+    font-family: "Segoe Fluent Icons";
+    src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* prevent scrollbars */
+  background: #fff4f2;
+  font-family: sans-serif;
+}
+
+#time {
+  position: absolute;
+  font-family: "San Francisco", sans-serif;
+  top: 20px;
+  left: 20px;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 128px;
+}
+
+#date {
+  top: 180px;
+  position: absolute;
+  font-family: "San Francisco", sans-serif;
+  left: 20px;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 32px;
+}
+
+.darkBtn {
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  background: transparent !important;
+  border: none !important;
+}
+
+body.dark-mode {
+  background: #362020;
+}
+
+body.dark-mode #time,
+body.dark-mode #date,
+body.dark-mode .darkBtn {
+  color: white;
+}

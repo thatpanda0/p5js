@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>l e a v e s</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.8/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="g.ico">
+  <script src="time.js"></script>
+</head>
+<body>
+  <button id="dark-mode-btn" class="darkBtn">&#xE708;</button>
+  <div id="time">00:00</div>
+  <div id="date">Monday, 1 January</div>
+
+  <script src="sketch.js"></script>
+  <script>
+    const btn = document.getElementById('dark-mode-btn');
+
+    btn.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+
+      const isDark = document.body.classList.contains('dark-mode');
+
+      btn.innerHTML = isDark ? '&#xE706;' : '&#xE708;';
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      btn.innerHTML = isDark ? '&#xE706;' : '&#xE708;';
+    });
+  </script>
+</body>
+
+</html>
